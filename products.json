@@ -1,0 +1,20 @@
+[
+  {
+    "sku": "YAM-AMP-001",
+    "name": "Yamaha WXA-50 Streaming Amplifier",
+    "price": 6999,
+    "manufacturer": "Platinum"
+  },
+  {
+    "sku": "JBL-CEIL-362",
+    "name": "JBL Ceiling Speaker 6.5\"",
+    "price": 1799,
+    "manufacturer": "Planetworld"
+  },
+  {
+    "sku": "POWERSUB-X1",
+    "name": "Powersoft X1 Subwoofer Amp",
+    "price": 18999,
+    "manufacturer": "Platinum"
+  }
+]
