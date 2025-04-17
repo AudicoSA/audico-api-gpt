@@ -30,13 +30,20 @@ def search_gpt():
         close_matches = get_close_matches(query, names, n=5, cutoff=0.3)
         results = [p for p in PRODUCTS if p["name"] in close_matches]
 
-    prompt = f"""You are a helpful audio-visual sales assistant.
-A customer said: "{query}"
+    prompt = f"""You are a senior AV system designer at Audico Online (https://www.audicoonline.co.za).
+A client has requested: "{query}"
 
-Here are the matching products:
+Your role is to:
+- Understand the space and use case
+- Select suitable products from the list below
+- If products are missing (e.g. speaker cable, mounts, etc.), explain what else would be needed
+- Speak with confident and friendly tone
+- Think like a designer, not a catalogue
+
+Available products:
 {chr(10).join([f"- {p['name']} (SKU: {p['sku']}) – R{p['price']}" for p in results])}
 
-Generate a friendly, professional quote recommendation using the product options above.
+Now, recommend a system and explain why it's suitable for the client’s needs.
 """
 
     try:
